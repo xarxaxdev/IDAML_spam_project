@@ -155,7 +155,7 @@ y_test= np.ravel(y_test)
 
 
 print('---Training Baseline tree---')
-tree = DecisionTreeClassifier(criterion='gini')
+tree = DecisionTreeClassifier(criterion='gini',class_weight='balanced')
 tree.fit(X_train,y_train)
 y_pred = tree.predict(X_val)
 tn, fp, fn, tp = confusion_matrix(y_val,y_pred).ravel()
