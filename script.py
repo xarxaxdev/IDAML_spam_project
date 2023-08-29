@@ -172,7 +172,7 @@ print(f"The total amount of missclassified in Validation is {best_secondary_metr
 
 print('---Training Main Model(Random Forest)---')
 grid = {'n_estimators':[50,100,200,500],'max_depth':[50,100,200,500]}
-grid = {'n_estimators':[100],'max_depth':[50]}
+#grid = {'n_estimators':[100],'max_depth':[50]}
 rfc = RandomForestClassifier(class_weight='balanced')
 print('We will use f1 to choose our best model.')
 print('Guaranteeing also 0.2% of all legitimate mails not being missclassfied.')
