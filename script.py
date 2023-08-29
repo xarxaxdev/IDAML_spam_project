@@ -104,12 +104,12 @@ word_max = X_train.max().sort_values().values
 print("We can see 99% of words have a very low maxim")
 plt.plot(word_max)
 plt.ylabel("Max occurrences per document distribution")
-#plt.show()
+plt.show()
 
 print(f"Total if we limit max to 50: {len([i for i in word_max if i< 50])}")
 plt.plot([i for i in word_max if i< 50])
 plt.ylabel("Max occurrences per document distribution")
-#plt.show()#
+plt.show()#
 
 
 
